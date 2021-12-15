@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+
     <EditText
         android:id="@+id/edit1"
         android:layout_width="match_parent"
@@ -53,12 +56,28 @@
         android:layout_marginTop="300dp"
         android:hint="Enter any text"
         />
+
     <Button
         android:id="@+id/btn4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="340dp"
-        android:text="Start Message"
+        android:text="Start Message" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/btn4"
+        android:text="@string/_1_behram_khan_n_2_ijlal_hussain_n_3_awais_ur_rehman"
         />
+
+
+
+
+
 
 </RelativeLayout>

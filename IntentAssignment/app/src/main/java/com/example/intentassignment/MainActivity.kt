@@ -7,6 +7,16 @@ import android.os.Bundle
 import androidx.core.app.ShareCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
+
+/*
+*   Name: Awais - Ur - Rehman (FA18-BSE-051)
+*   Name: Ijla Hussain (083)
+*   Name: Behram Shah (088)
+* */
+
+
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

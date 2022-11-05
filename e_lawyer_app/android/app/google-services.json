@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698616934123",
+    "project_id": "e-lawyer-app",
+    "storage_bucket": "e-lawyer-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698616934123:android:cc84e1e1ae9b80e0ee58ae",
+        "android_client_info": {
+          "package_name": "com.example.e_lawyer_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698616934123-2tgt3o0c994lut985ioo2tjhk07rr6de.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA9Rs8nnU9WmsFlY1i6slwti6tvMt2Awo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698616934123-2tgt3o0c994lut985ioo2tjhk07rr6de.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

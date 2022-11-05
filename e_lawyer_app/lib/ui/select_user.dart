@@ -26,7 +26,7 @@ class _SelectUserState extends State<SelectUser> {
   Future getValidationData() async {
     final SharedPreferences sp = await _pref;
     var obtainedEmail = sp.getString('clientemail')!;
-    var lawyerEmail = sp.getString('lawyeremail')!;
+    //var lawyerEmail = sp.getString('lawyeremail')!;
     setState(() {
       finalemail = obtainedEmail;
       //obtainedlawyerEmail = lawyerEmail;

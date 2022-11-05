@@ -168,8 +168,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 25.h,),
-            Text(loggedInUser.c_email.toString()),
-            SizedBox(height: 25.h,),
+            //Text(loggedInUser.c_email.toString()),
+            //SizedBox(height: 25.h,),
             Row(
               //crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -300,6 +300,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       Image.asset('assets/images/banking.png', height: 50.h,),
                       SizedBox(height: 10.h,),
                       const Text('Law firms'),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 5.w,),
+
+                Container(
+                  width: 120.w,
+                  height: 120.h,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/images/calendar.png', height: 50.h,),
+                      SizedBox(height: 10.h,),
+                      const Text('Calendar'),
                     ],
                   ),
                 ),

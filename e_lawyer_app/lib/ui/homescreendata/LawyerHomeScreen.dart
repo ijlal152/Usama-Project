@@ -3,6 +3,10 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_lawyer_app/ui/UserModel/lawyerModel.dart';
 import 'package:e_lawyer_app/ui/Utils.dart';
+import 'package:e_lawyer_app/ui/homescreendata/manage%20cases/managecase.dart';
+import 'package:e_lawyer_app/ui/homescreendata/manage%20team/manageteam.dart';
+import 'package:e_lawyer_app/ui/homescreendata/notepad/noteslist.dart';
+import 'package:e_lawyer_app/ui/homescreendata/remainder/remainder.dart';
 import 'package:e_lawyer_app/ui/login_signup_pages/login_lawyer.dart';
 import 'package:e_lawyer_app/ui/profileinfoscreens/lawyerprofileinfo.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -153,60 +157,75 @@ class _LawyerHomeScreenState extends State<LawyerHomeScreen> {
               //crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 120.w,
-                  height: 120.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/notes.png', height: 50.h,),
-                      SizedBox(height: 10.h,),
-                      const Text('Notepad', style: TextStyle(
-                        fontWeight: FontWeight.bold
-                      ),),
-                    ],
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => NotesList()));
+                  },
+                  child: Container(
+                    width: 120.w,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/images/notes.png', height: 50.h,),
+                        SizedBox(height: 10.h,),
+                        const Text('Notepad', style: TextStyle(
+                          fontWeight: FontWeight.bold
+                        ),),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(width: 5.w,),
-                Container(
-                  width: 120.w,
-                  height: 120.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/calendar.png', height: 50.h,),
-                      SizedBox(height: 10.h,),
-                      const Text('Calendar', style: TextStyle(
-                          fontWeight: FontWeight.bold
-                      ),),
-                    ],
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Reminder()));
+                  },
+                  child: Container(
+                    width: 120.w,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/images/calendar.png', height: 50.h,),
+                        SizedBox(height: 10.h,),
+                        const Text('Remainder', style: TextStyle(
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(width: 5.w,),
-                Container(
-                  width: 120.w,
-                  height: 120.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/case-study.png', height: 50.h,),
-                      SizedBox(height: 10.h,),
-                      Text('Manage cases/teams', style: TextStyle(
-                          fontWeight: FontWeight.bold
-                      ),),
-                    ],
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ManageCases()));
+                  },
+                  child: Container(
+                    width: 120.w,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/images/case-study.png', height: 50.h,),
+                        SizedBox(height: 10.h,),
+                        Text('Manage Cases', style: TextStyle(
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ],
+                    ),
                   ),
                 ),
                 //SizedBox(width: 5,),
@@ -214,24 +233,29 @@ class _LawyerHomeScreenState extends State<LawyerHomeScreen> {
             ),
             SizedBox(height: 20.h,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  width: 120.w,
-                  height: 120.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/pdf.png', height: 50.h,),
-                      SizedBox(height: 10.h,),
-                      Text('Pdf reader', style: TextStyle(
-                          fontWeight: FontWeight.bold
-                      ),),
-                    ],
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ManageTeam()));
+                  },
+                  child: Container(
+                    width: 120.w,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('assets/images/team.png', height: 50.h,),
+                        SizedBox(height: 10.h,),
+                        const Text('Manage Team', style: TextStyle(
+                            fontWeight: FontWeight.bold
+                        ),),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(width: 5.w,),
@@ -245,53 +269,18 @@ class _LawyerHomeScreenState extends State<LawyerHomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assets/images/newspaper.png', height: 50.r,),
+                      Image.asset('assets/images/pdf.png', height: 50.r,),
                       SizedBox(height: 10.h),
-                      Text('Legal News'),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 5.w,),
-                Container(
-                  width: 120.w,
-                  height: 120.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/defences.png', height: 50.h,),
-                      SizedBox(height: 10.h,),
-                      const Text('Defamation'),
+                      Text('Pdf Reader', style: TextStyle(
+                          fontWeight: FontWeight.bold
+                      ),),
                     ],
                   ),
                 ),
                 //SizedBox(width: 5,),
               ],
             ),
-            SizedBox(height: 20.h,),
-            Row(
-              children: [
-                Container(
-                  width: 120.w,
-                  height: 120.h,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('assets/images/banking.png', height: 50.h,),
-                      SizedBox(height: 10.h,),
-                      const Text('Law firms'),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+
             //Text('Client Side', style: TextStyle(fontSize: 35.sp),),
             // SizedBox(height: 30.h,),
             // Text('Full name: ${loggedInUser.c_fullname}'),
